@@ -1,0 +1,33 @@
+{
+  "version": "amazon-video-games-raw-v1",
+  "source_rows": 4624615,
+  "rows": 185798,
+  "users": 110804,
+  "products": 39648,
+  "metadata_rows": 39648,
+  "single_review_users": 80121,
+  "selection": "SHA256('mie451-raw-v1:' + user_id), first 8 bytes as a big-endian integer, modulo 25 equals zero. Retain all source review rows for selected users and matching metadata rows. Retain missing user IDs for audit.",
+  "processing": "No core filter, activity threshold, deduplication, text normalization, rating filter, date correction, or field projection. Selected JSON lines copied verbatim.",
+  "sources": {
+    "Video_Games.jsonl.gz": {
+      "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/review_categories/Video_Games.jsonl.gz",
+      "bytes": 814206092,
+      "sha256": "52d8762c94a5b99d3bccdb31c15cc6c99e05c89f9042cd3753b3b623a44bc193"
+    },
+    "meta_Video_Games.jsonl.gz": {
+      "url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_2023/raw/meta_categories/meta_Video_Games.jsonl.gz",
+      "bytes": 103096082,
+      "sha256": "ced9696b0874121327a438bfe9d3d01aba45da158e58f94f4920352d75fc1fc9"
+    }
+  },
+  "files": {
+    "reviews.jsonl.gz": {
+      "bytes": 33005405,
+      "sha256": "439e6932186368d1774f50ffef207bd4357360cda8bd86fd30bb188c8f698aef"
+    },
+    "metadata.jsonl.gz": {
+      "bytes": 37342619,
+      "sha256": "856981835513d66b37ecdf7e1adada4b521ddd73ff2434dad6899469f58842f9"
+    }
+  }
+}
